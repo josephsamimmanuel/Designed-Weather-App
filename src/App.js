@@ -1,9 +1,9 @@
 import axios from "axios"
 import { useState } from "react"
 function App() {
-  const [deg,setdeg]=useState("222")
-  const [city,setcity]=useState("france")
-  const [desc,setdesc]=useState("Rain")
+  const [deg,setdeg]=useState("")
+  const [city,setcity]=useState("")
+  const [desc,setdesc]=useState("")
   const [enteredvalue,setvalue]=useState("")
 
 function handleinput(event){
