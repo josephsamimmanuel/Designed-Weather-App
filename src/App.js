@@ -1,5 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
+import './App.css'
+
 function App() {
   const [deg,setdeg]=useState("")
   const [city,setcity]=useState("")
@@ -24,12 +26,13 @@ setvalue(event.target.value)
   }
   return (
       <div className="flex flex-row justify-center h-[100vh] items-center" >
-          <div style={{backgroundImage: "linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)"}} className=" p-2 rounded-md shadow">
-              <h2 className=" font-medium text-xl">Hey!🌤️</h2>
-              <p  className=" text-xs">Do you want to know the weather Report :)</p>
-              <input onChange={handleinput} type="text" className=" rounded-md h-6 text-base mt-2 p-1 outline-none" placeholder="City name" /><br />
-              <button onClick={getdata} className=" bg-black text-white rounded-lg p-2 text-xs mt-2">Get Report⚡</button>
-              <p className=" text-sm mt-2">Degree: {deg} | City: {city} | Weather: {desc}</p>
+          <div style={{backgroundImage: "linear-gradient(120deg, #a6c0fe 0%, #f68084 100%)"}} className=" p-5 rounded-md shadow">
+              <h2 className=" font-bold text-4xl m-5 mb-4">Hey!🌤️</h2>
+              <p  className=" text-2xl m-5">Do you want to know the weather Report :)</p>
+              <input onChange={handleinput} type="text" className=" rounded-md h-6 w-80 text-base mb-3 ml-5 p-5 mt-2 outline-none" placeholder="City name" /><br />
+              <button onClick={getdata} className=" bg-black text-white rounded-lg p-2 text-lg mb-3 ml-5 mt-4">Get Report⚡</button>
+             <p className=" text-lg mt-2 p-5"> <i class="fa-solid fa-temperature-quarter"></i> Degree: {deg} | <i class="fa-solid fa-location-dot"></i>  City: {city} | <i class="fa-solid fa-cloud-rain"></i> Weather: {desc}</p>
+             
           </div>
       </div>)
 }
